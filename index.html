@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laboratorio: Fetch, LocalStorage y Eventos</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="app-header">
+        <h1>Mini Blog Explorer</h1>
+        <p class="subtitle">
+          Laboratorio #3
+        </p>
+      </header>
+
+      <main class="app-main">
+        <section class="card config-card">
+          <h2>Configuración de consulta</h2>
+          <p class="hint">
+            Usa el formulario para cargar publicaciones desde una API pública.
+          </p>
+          <form id="postForm" class="form-grid">
+            <label class="form-field">
+              <span>ID de usuario (1 - 10)</span>
+              <input
+                type="number"
+                id="userIdInput"
+                name="userId"
+                min="1"
+                max="10"
+                placeholder="Ej: 1"
+              />
+            </label>
+
+            <label class="form-field checkbox-field">
+              <input type="checkbox" id="rememberUser" />
+              <span>Recordar este ID de usuario</span>
+            </label>
+
+            <button type="submit" class="btn primary-btn">
+              Cargar publicaciones
+            </button>
+          </form>
+          <p class="helper-text">
+            Sugerencia: la API de prueba usada es
+            <code>jsonplaceholder.typicode.com</code>.
+          </p>
+        </section>
+
+        <section class="card results-card">
+          <header class="results-header">
+            <h2>Resultados</h2>
+            <button id="clearResultsBtn" class="btn ghost-btn">
+              Limpiar resultados
+            </button>
+          </header>
+
+          <div id="statusArea" class="status-area">
+            <p class="status-message">Aún no se ha hecho ninguna petición.</p>
+          </div>
+
+          <ul id="postsList" class="posts-list">
+            <!-- Aquí se insertarán las publicaciones con JavaScript -->
+          </ul>
+        </section>
+      </main>
+
+      <footer class="app-footer">
+        <small>
+          Esta interfaz es solo base de práctica. No necesitas modificar
+          <code>index.html</code> ni <code>styles.css</code> en este laboratorio.
+        </small>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
